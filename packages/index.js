@@ -1,3 +1,4 @@
+import 'semantic-ui-css/semantic.css'
 // 引入定义好的组件
 import MyButton from './button/button.vue'
 import MyHeadline from './headline/headline.vue'
@@ -7,7 +8,7 @@ import MyHeadline from './headline/headline.vue'
 export default {
   // Vue.use(对象)。它会执行对象的install方法，并传入Vue对象
   install (Vue) {
-    console.log('install ....')
+    // console.log('install ....')
     // MyButton 组件名
     Vue.component('MyButton', MyButton)
     Vue.component('MyHeadline', MyHeadline)
