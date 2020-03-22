@@ -1,12 +1,13 @@
 {
-  "name": "ui-93",
-  "version": "0.1.0",
+  "name": "btn-ui-93",
+  "version": "0.0.1",
   "private": false,
+  "main": "lib/btn-ui.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "b": "vue-cli-service build --target lib --name demo_vue_ui --dest lib ./packages/index.js" 
+    "b": "vue-cli-service build --target lib --name btn-ui --dest lib ./packages/index.js" 
   },
   "dependencies": {
     "core-js": "^3.6.4",
