@@ -1,15 +1,19 @@
 <template>
-  <div class="ui dimmer modals page active" :class="{'active':isShow}">
-    <div class="ui standard modal active" :class="{'active':isShow}" style="top: 60px;">
+  <div class="ui dimmer modals page" :class="{'active':isShow}">
+    <div class="ui standard modal" :class="{'active':isShow}" style="top: 60px;">
       <i class="close icon" @click="hNo"></i>
-      <div class="header">头部</div>
+      <div class="header">
+        <slot name="header">{{title}}</slot>
+      </div>
       <div class="content">
-        <div class="description">内容</div>
+        <div class="description">
+          <slot name="body">{{content}}</slot>
+        </div>
       </div>
       <div class="actions">
-        <div class="ui black button">Nope</div>
-        <div class="ui positive right labeled icon button">
-          Yep, that's me
+        <div class="ui black button" @click="nope">{{noTxt}}</div>
+        <div class="ui positive right labeled icon button" @click="yes">
+          {{yesTxt}}
           <i class="checkmark icon"></i>
         </div>
       </div>
@@ -25,6 +29,26 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    title: {
+      type: String,
+      default: '系统提示',
+      require: false
+    },
+    content: {
+      type: String,
+      default: '加油！',
+      require: false
+    },
+    noTxt: {
+      type: String,
+      default: '取消',
+      require: false
+    },
+    yesTxt: {
+      type: String,
+      default: '确定',
+      require: false
     }
   },
   data () {
@@ -44,6 +68,14 @@ export default {
       this.isShow = false
       // 父组件
       this.$emit('input', this.isShow)
+    },
+    nope () {
+      this.hNo()
+      this.$emit('no')
+    },
+    yes () {
+      this.hNo()
+      this.$emit('yes')
     }
   }
 }

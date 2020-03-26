@@ -3,7 +3,7 @@ import 'semantic-ui-css/semantic.css'
 import MyButton from './button/button.vue'
 import MyHeadline from './headline/headline.vue'
 import MyDivider from './divider/divider.vue'
-import MySlider from './slider/slider1.vue'
+import MySlider from './slider/slider.vue'
 import MyDialog from './dialog/dialog.vue'
 
 // 整体向外导出一个对象

@@ -27,3 +27,18 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### down
+npm btn-ui-93
+
+### use
+import UI from 'btn-ui-93'
+import 'ui-93/lib/btn-ui.css'
+Vue.use(UI)
+
+### components
+MyButton
+MyDialog
+MyDivider
+MyHeadline
+MySlider
